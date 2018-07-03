@@ -8293,10 +8293,17 @@ AFRAME.registerComponent('arjs-anchor', {
 					markersAreaEnabled: false
 				}
 			}else if( _this.data.type === 'pattern' ){
-				markerParameters.type = _this.data.type
-				markerParameters.patternUrl = _this.data.patternUrl;
+				markerParameters.type = 'pattern'
+				markerParameters.patternUrl = '/Users/alessiamasola/Documents/work/web-ar-playground/web-ar/pattern-marker.patt'
 				markerParameters.markersAreaEnabled = false
-			}else {
+				// markerParameters.type = _this.data.type
+				// markerParameters.patternUrl = _this.data.patternUrl;
+				// markerParameters.markersAreaEnabled = false
+			}else if( _this.data.preset === 'custom' ){
+				arProfile.defaultMarkerParameters.type = 'pattern'
+ 				arProfile.defaultMarkerParameters.patternUrl = _this.data.patternUrl;
+				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+			} else {
 				// console.assert( this.data.preset === '', 'illegal preset value '+this.data.preset)
 			}
 
