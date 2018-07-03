@@ -8294,7 +8294,7 @@ AFRAME.registerComponent('arjs-anchor', {
 				}
 			}else if( _this.data.type === 'pattern' ){
 				markerParameters.type = 'pattern'
-				markerParameters.patternUrl = '/Users/alessiamasola/Documents/work/web-ar-playground/web-ar/pattern-marker.patt'
+				markerParameters.patternUrl = THREEx.ArToolkitContext.baseURL + '/Users/alessiamasola/Documents/work/web-ar-playground/web-ar/pattern-marker.patt'
 				markerParameters.markersAreaEnabled = false
 				// markerParameters.type = _this.data.type
 				// markerParameters.patternUrl = _this.data.patternUrl;
